@@ -9,7 +9,7 @@ public class DriverFactory {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            System.setProperty("webdriver.chrome.driver", "path/to/chromedriver"); // update your local path
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"Drivers/chromedriver"); // update your local path
             driver = new ChromeDriver();
             driver.manage().window().maximize();
         }
